@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89407E2A2469C45200F2633B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89407E292469C45200F2633B /* LoginView.swift */; };
 		89697C152465A6FD00E1698D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89697C142465A6FD00E1698D /* Buttons.swift */; };
 		89A9693D245F138B00E8A9F1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A9693C245F138B00E8A9F1 /* HealthKit.framework */; };
 		89A969412460A4A700E8A9F1 /* QuestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A969402460A4A700E8A9F1 /* QuestDetail.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89407E292469C45200F2633B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		89697C142465A6FD00E1698D /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		89A9693A245F138A00E8A9F1 /* PrototypeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrototypeApp.entitlements; sourceTree = "<group>"; };
 		89A9693C245F138B00E8A9F1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 				89F755DA245C99B600BA4160 /* Modifiers.swift */,
 				89F755CC245B966700BA4160 /* Home.swift */,
 				89F755CE245B9E2D00BA4160 /* HomeView.swift */,
+				89407E292469C45200F2633B /* LoginView.swift */,
 				89F755DC245D9BD000BA4160 /* QuestList.swift */,
 				89A9694D24620E9000E8A9F1 /* QuestStore.swift */,
 				89A969402460A4A700E8A9F1 /* QuestDetail.swift */,
@@ -234,6 +237,7 @@
 				89F755CB245B8FD700BA4160 /* MenuView.swift in Sources */,
 				89F755DB245C99B600BA4160 /* Modifiers.swift in Sources */,
 				89F755D3245C715D00BA4160 /* UpdateDetail.swift in Sources */,
+				89407E2A2469C45200F2633B /* LoginView.swift in Sources */,
 				89A9694E24620E9000E8A9F1 /* QuestStore.swift in Sources */,
 				89A96949246209BD00E8A9F1 /* DataStore.swift in Sources */,
 				89F755D9245C7BA700BA4160 /* RingView.swift in Sources */,
