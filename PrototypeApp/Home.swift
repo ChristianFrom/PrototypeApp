@@ -16,12 +16,15 @@ struct Home: View {
     @State var showCard = false
     @State var bottomState = CGSize.zero
     @State var showFull = false
+    @EnvironmentObject var user: UserStore
+    
+    
     var body: some View {
         ZStack {
             Color("background2")
                 .edgesIgnoringSafeArea(.all)
             
-            MenuView()
+            MenuView(showProfile: $showProfile)
                 .background(Color.black.opacity(0.001))
                 .offset(y: showProfile ? 50 : screen.height)
                 .offset(y: viewState.height)
@@ -53,6 +56,7 @@ struct Home: View {
                         Spacer()
                     }
                     .background(Color("background1"))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             )
                 .clipShape(RoundedRectangle(cornerRadius: 2, style: .continuous))
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
@@ -62,8 +66,31 @@ struct Home: View {
                 .offset(y: showProfile ? -450 : 0)
                 .scaleEffect(showProfile ? 0.9 : 1)
                 .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
-                .edgesIgnoringSafeArea(.all)
-            
+                .edgesIgnoringSafeArea(.top)
+                        
+            if user.showLogin {
+                ZStack {
+                    LoginView()
+                    
+                    VStack {
+                        HStack {
+                            Spacer()
+                            
+                            Image(systemName: "xmark")
+                                .frame(width: 36, height: 36)
+                                .foregroundColor(.white)
+                                .background(Color.black)
+                                .clipShape(Circle())
+                        }
+                        Spacer()
+                    }
+                    .padding()
+                    .onTapGesture {
+                        self.user.showLogin = false
+                    }
+                }
+            }
+
             if showContent {
                 BlurView(style: .systemMaterial).edgesIgnoringSafeArea(.all)
                 
@@ -71,28 +98,44 @@ struct Home: View {
                 
             }
         }
-        .padding(.bottom, 0.17)
-        
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home().environment(\.colorScheme, .dark)
-            .environment(\.sizeCategory, .extraExtraExtraLarge)
+        Home()
+            //.environment(\.colorScheme, .dark)
+            //.environment(\.sizeCategory, .extraExtraExtraLarge)
+            .environmentObject(UserStore())
     }
 }
 
 struct AvatarView: View {
     @Binding var showProfile: Bool
+    @EnvironmentObject var user: UserStore
     
     var body: some View {
-        Button(action: {self.showProfile.toggle()}) {
-            Image("Avatar")
-                .renderingMode(.original)
-                .resizable()
-                .frame(width: 36, height: 36)
-                .clipShape(Circle())
+        VStack {
+            if user.isLogged {
+                Button(action: {self.showProfile.toggle()}) {
+                    Image("Avatar")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 36, height: 36)
+                        .clipShape(Circle())
+                }
+            } else {
+                Button(action: {self.user.showLogin.toggle()}) {
+                    Image(systemName: "person")
+                        .foregroundColor(.primary)
+                        .font(.system(size: 16, weight: .medium))
+                        .frame(width: 36, height: 36)
+                        .background(Color("background3"))
+                        .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+                }
+            }
         }
     }
 }

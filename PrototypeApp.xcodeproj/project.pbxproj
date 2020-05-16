@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		89407E2A2469C45200F2633B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89407E292469C45200F2633B /* LoginView.swift */; };
 		89697C152465A6FD00E1698D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89697C142465A6FD00E1698D /* Buttons.swift */; };
+		896DC842246EB7B600483A3E /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 896DC840246EB7B600483A3E /* loading.json */; };
+		896DC843246EB7B600483A3E /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 896DC841246EB7B600483A3E /* success.json */; };
+		896DC846246EB80200483A3E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 896DC845246EB80200483A3E /* Lottie */; };
+		896DC848246EB83D00483A3E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896DC847246EB83D00483A3E /* LottieView.swift */; };
+		896DC84A246EBA0B00483A3E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896DC849246EBA0B00483A3E /* LoadingView.swift */; };
+		896DC84C246EBBCD00483A3E /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896DC84B246EBBCD00483A3E /* SuccessView.swift */; };
+		896DC850246EC1C800483A3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 896DC84F246EC1C800483A3E /* GoogleService-Info.plist */; };
+		896DC852246EC9D200483A3E /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896DC851246EC9D200483A3E /* UserStore.swift */; };
 		89A9693D245F138B00E8A9F1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A9693C245F138B00E8A9F1 /* HealthKit.framework */; };
 		89A969412460A4A700E8A9F1 /* QuestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A969402460A4A700E8A9F1 /* QuestDetail.swift */; };
 		89A969432461CD3B00E8A9F1 /* Eksempel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A969422461CD3B00E8A9F1 /* Eksempel.swift */; };
@@ -35,11 +43,20 @@
 		89F755D9245C7BA700BA4160 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F755D8245C7BA700BA4160 /* RingView.swift */; };
 		89F755DB245C99B600BA4160 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F755DA245C99B600BA4160 /* Modifiers.swift */; };
 		89F755DD245D9BD100BA4160 /* QuestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F755DC245D9BD000BA4160 /* QuestList.swift */; };
+		E02E4B8DA37333DA8895C7E2 /* Pods_PrototypeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317AA065C24D5FDD016B0E2A /* Pods_PrototypeApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		317AA065C24D5FDD016B0E2A /* Pods_PrototypeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrototypeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89407E292469C45200F2633B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		89697C142465A6FD00E1698D /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		896DC840246EB7B600483A3E /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		896DC841246EB7B600483A3E /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
+		896DC847246EB83D00483A3E /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		896DC849246EBA0B00483A3E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		896DC84B246EBBCD00483A3E /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		896DC84F246EC1C800483A3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		896DC851246EC9D200483A3E /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		89A9693A245F138A00E8A9F1 /* PrototypeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrototypeApp.entitlements; sourceTree = "<group>"; };
 		89A9693C245F138B00E8A9F1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		89A969402460A4A700E8A9F1 /* QuestDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestDetail.swift; sourceTree = "<group>"; };
@@ -67,6 +84,8 @@
 		89F755D8245C7BA700BA4160 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		89F755DA245C99B600BA4160 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		89F755DC245D9BD000BA4160 /* QuestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestList.swift; sourceTree = "<group>"; };
+		903BD9A4A7A216B30539B647 /* Pods-PrototypeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrototypeApp.debug.xcconfig"; path = "Target Support Files/Pods-PrototypeApp/Pods-PrototypeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E913A9D5833A5F751ED1F20B /* Pods-PrototypeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrototypeApp.release.xcconfig"; path = "Target Support Files/Pods-PrototypeApp/Pods-PrototypeApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,16 +96,28 @@
 				89A96951246214C300E8A9F1 /* SDWebImageSwiftUI in Frameworks */,
 				89A9694C24620C2C00E8A9F1 /* Contentful in Frameworks */,
 				89A9693D245F138B00E8A9F1 /* HealthKit.framework in Frameworks */,
+				896DC846246EB80200483A3E /* Lottie in Frameworks */,
+				E02E4B8DA37333DA8895C7E2 /* Pods_PrototypeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		896DC83F246EB7B600483A3E /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				896DC840246EB7B600483A3E /* loading.json */,
+				896DC841246EB7B600483A3E /* success.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		89A9693B245F138B00E8A9F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				89A9693C245F138B00E8A9F1 /* HealthKit.framework */,
+				317AA065C24D5FDD016B0E2A /* Pods_PrototypeApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,6 +128,7 @@
 				89F755B5245AD76100BA4160 /* PrototypeApp */,
 				89F755B4245AD76100BA4160 /* Products */,
 				89A9693B245F138B00E8A9F1 /* Frameworks */,
+				F20DB7F9145094BDC7538FEB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +152,7 @@
 				89F755CC245B966700BA4160 /* Home.swift */,
 				89F755CE245B9E2D00BA4160 /* HomeView.swift */,
 				89407E292469C45200F2633B /* LoginView.swift */,
+				896DC851246EC9D200483A3E /* UserStore.swift */,
 				89F755DC245D9BD000BA4160 /* QuestList.swift */,
 				89A9694D24620E9000E8A9F1 /* QuestStore.swift */,
 				89A969402460A4A700E8A9F1 /* QuestDetail.swift */,
@@ -132,10 +165,15 @@
 				89A969462462066B00E8A9F1 /* PostList.swift */,
 				89F755D6245C781000BA4160 /* TabBar.swift */,
 				89A969522462184100E8A9F1 /* BlurView.swift */,
+				896DC847246EB83D00483A3E /* LottieView.swift */,
+				896DC849246EBA0B00483A3E /* LoadingView.swift */,
+				896DC84B246EBBCD00483A3E /* SuccessView.swift */,
 				89697C142465A6FD00E1698D /* Buttons.swift */,
 				89F755BC245AD76300BA4160 /* Assets.xcassets */,
+				896DC83F246EB7B600483A3E /* Lottie */,
 				89F755C1245AD76300BA4160 /* LaunchScreen.storyboard */,
 				89F755C4245AD76300BA4160 /* Info.plist */,
+				896DC84F246EC1C800483A3E /* GoogleService-Info.plist */,
 				89F755BE245AD76300BA4160 /* Preview Content */,
 				89A969422461CD3B00E8A9F1 /* Eksempel.swift */,
 			);
@@ -150,6 +188,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F20DB7F9145094BDC7538FEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				903BD9A4A7A216B30539B647 /* Pods-PrototypeApp.debug.xcconfig */,
+				E913A9D5833A5F751ED1F20B /* Pods-PrototypeApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89F755C7245AD76300BA4160 /* Build configuration list for PBXNativeTarget "PrototypeApp" */;
 			buildPhases = (
+				113ED885729FE3324FE6D33C /* [CP] Check Pods Manifest.lock */,
 				89F755AF245AD76100BA4160 /* Sources */,
 				89F755B0245AD76100BA4160 /* Frameworks */,
 				89F755B1245AD76100BA4160 /* Resources */,
+				CDECF3E61A4829F6240CF445 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +218,7 @@
 			packageProductDependencies = (
 				89A9694B24620C2C00E8A9F1 /* Contentful */,
 				89A96950246214C300E8A9F1 /* SDWebImageSwiftUI */,
+				896DC845246EB80200483A3E /* Lottie */,
 			);
 			productName = PrototypeApp;
 			productReference = 89F755B3245AD76100BA4160 /* PrototypeApp.app */;
@@ -201,6 +251,7 @@
 			packageReferences = (
 				89A9694A24620C2C00E8A9F1 /* XCRemoteSwiftPackageReference "contentful.swift" */,
 				89A9694F246214C300E8A9F1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				896DC844246EB80200483A3E /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 89F755B4245AD76100BA4160 /* Products */;
 			projectDirPath = "";
@@ -216,13 +267,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				896DC843246EB7B600483A3E /* success.json in Resources */,
 				89F755C3245AD76300BA4160 /* LaunchScreen.storyboard in Resources */,
 				89F755C0245AD76300BA4160 /* Preview Assets.xcassets in Resources */,
+				896DC842246EB7B600483A3E /* loading.json in Resources */,
 				89F755BD245AD76300BA4160 /* Assets.xcassets in Resources */,
+				896DC850246EC1C800483A3E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		113ED885729FE3324FE6D33C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrototypeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDECF3E61A4829F6240CF445 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrototypeApp/Pods-PrototypeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrototypeApp/Pods-PrototypeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrototypeApp/Pods-PrototypeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		89F755AF245AD76100BA4160 /* Sources */ = {
@@ -234,11 +330,14 @@
 				89F755D5245C743500BA4160 /* UpdateStore.swift in Sources */,
 				89F755D1245C5EB500BA4160 /* UpdateList.swift in Sources */,
 				89A969432461CD3B00E8A9F1 /* Eksempel.swift in Sources */,
+				896DC84A246EBA0B00483A3E /* LoadingView.swift in Sources */,
 				89F755CB245B8FD700BA4160 /* MenuView.swift in Sources */,
+				896DC84C246EBBCD00483A3E /* SuccessView.swift in Sources */,
 				89F755DB245C99B600BA4160 /* Modifiers.swift in Sources */,
 				89F755D3245C715D00BA4160 /* UpdateDetail.swift in Sources */,
 				89407E2A2469C45200F2633B /* LoginView.swift in Sources */,
 				89A9694E24620E9000E8A9F1 /* QuestStore.swift in Sources */,
+				896DC852246EC9D200483A3E /* UserStore.swift in Sources */,
 				89A96949246209BD00E8A9F1 /* DataStore.swift in Sources */,
 				89F755D9245C7BA700BA4160 /* RingView.swift in Sources */,
 				89A969412460A4A700E8A9F1 /* QuestDetail.swift in Sources */,
@@ -249,6 +348,7 @@
 				89F755BB245AD76100BA4160 /* ContentView.swift in Sources */,
 				89A969472462066B00E8A9F1 /* PostList.swift in Sources */,
 				89A969532462184100E8A9F1 /* BlurView.swift in Sources */,
+				896DC848246EB83D00483A3E /* LottieView.swift in Sources */,
 				89F755D7245C781000BA4160 /* TabBar.swift in Sources */,
 				89A969452462045500E8A9F1 /* Data.swift in Sources */,
 			);
@@ -301,6 +401,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -361,6 +462,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -384,6 +486,7 @@
 		};
 		89F755C8245AD76300BA4160 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 903BD9A4A7A216B30539B647 /* Pods-PrototypeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PrototypeApp/PrototypeApp.entitlements;
@@ -405,6 +508,7 @@
 		};
 		89F755C9245AD76300BA4160 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E913A9D5833A5F751ED1F20B /* Pods-PrototypeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PrototypeApp/PrototypeApp.entitlements;
@@ -448,6 +552,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		896DC844246EB80200483A3E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
 		89A9694A24620C2C00E8A9F1 /* XCRemoteSwiftPackageReference "contentful.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/contentful/contentful.swift.git";
@@ -467,6 +579,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		896DC845246EB80200483A3E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 896DC844246EB80200483A3E /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		89A9694B24620C2C00E8A9F1 /* Contentful */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 89A9694A24620C2C00E8A9F1 /* XCRemoteSwiftPackageReference "contentful.swift" */;

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LoginView: View {
     @State var email = ""
@@ -14,6 +15,37 @@ struct LoginView: View {
     @State var isFocused = false
     @State var showAlert = false
     @State var alertMessage = "Something went wrong..."
+    @State var isLoading = false
+    @State var isSuccessFul = false
+    @EnvironmentObject var user: UserStore
+    
+    func login() {
+        self.hideKeyboard()
+        self.isFocused = false
+        self.isLoading = true
+
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            self.isLoading = false
+
+            if error != nil {
+                self.alertMessage = error?.localizedDescription ?? ""
+                self.showAlert = true
+            } else {
+                self.isSuccessFul = true
+                self.user.isLogged = true
+                //Sætter userdefaults i UserStore, for at opnå persistens
+                UserDefaults.standard.set(true, forKey: "isLogged")
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.isSuccessFul = false
+                    self.email = ""
+                    self.password = ""
+                    self.user.showLogin = false
+                    
+                }
+            }
+        }
+    }
     
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -89,13 +121,10 @@ struct LoginView: View {
                     Spacer()
                     
                     Button(action: {
-                        self.showAlert = true
-                        self.hideKeyboard()
-                        self.isFocused = false
+                        self.login()
                     }) {
                         Text("Log in")
                             .foregroundColor(.black)
-                        
                     }
                     .padding(12)
                     .padding(.horizontal, 30)
@@ -116,6 +145,12 @@ struct LoginView: View {
                 .onTapGesture {
                     self.isFocused = false
                     self.hideKeyboard()
+            }
+            if isLoading {
+                LoadingView()
+            }
+            if isSuccessFul {
+                SuccessView()
             }
         }
     }
@@ -164,14 +199,14 @@ struct CoverView: View {
                     .offset(x: -150, y:-200)
                     .rotationEffect(Angle(degrees: show ? 360 + 90 : 90))
                     .blendMode(.plusDarker)
-                    // .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
+                    .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
                     .onAppear{ self.show = true }
                 
                 Image(uiImage: #imageLiteral(resourceName: "Blob"))
                     .offset(x: -250, y:-250)
                     .rotationEffect(Angle(degrees: show ? 360 : 0), anchor: .leading)
                     .blendMode(.overlay)
-                //.animation(Animation.linear(duration: 100).repeatForever(autoreverses: false))
+                    .animation(Animation.linear(duration: 100).repeatForever(autoreverses: false))
             }
         )
             .background(
